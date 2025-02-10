@@ -1,4 +1,4 @@
-# Maximizing the Position Embedding for Vision Transformers with Global Average Pooling
+# ELITE: Enhanced Language-Image Toxicity Evaluation for Safety
 
 
 [[Project Page]](https://velpegor.github.io/ELITE/)
