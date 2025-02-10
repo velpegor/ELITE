@@ -173,7 +173,7 @@
 	<div class="container is-max-desktop">
 	  <div class="columns is-centered">
 		<div class="column is-full-width">
-		  <img src="./static/images/figure1 (1).pdf" alt="Figure 1" style="width:100%; max-width:1000px;">
+		  <img src="./static/images/figure1 (1)-1.png" alt="Figure 1" style="width:100%; max-width:1000px;">
 		  <p>
         Contributions of ELITE. (a) Benchmark Construction: The ELITE benchmark is a high-quality benchmark built by filtering out unsuccessful image-text pairs using the ELITE evaluator. (b) Generated Image-Text Pairs: Image-text pair with various methods for inducing harmful responses from VLMs. (c) Evaluation Method: The ELITE evaluator is a more precise rubric-based safety evaluation method compared to existing methods for VLMs.		  
 	      </p>
@@ -183,48 +183,80 @@
   </section>
 
   <section class="section" id="Figure3">
-	<div class="container is-max-desktop">
-	  <div class="columns is-centered">
-		<div class="column is-full-width">
-      <h2 class="title is-3">ELITE Benchmark</h2>
-		  <img src="./static/images/table.png" alt="Figure 3" style="width:100%; max-width:1000px;">
-		  <p>
-        Overview of the ELITE benchmark. We created 4,587 image-text pairs by filtering out ambiguous image-text pairs that are unable to induce harmful responses in both existing benchmarks and the in-house generated image-text pairs. ``New" refers to the image-text pairs we generated using various methods. In the case of JailbreakV-28k, filtering is performed only on insufficient taxonomies to maintain balance across taxonomies.
-	    </p>
-      <div class="column is-half">
-			  <img src="./static/images/result3 (4).pdf" alt="result" style="width:100%; max-width:1000px; display:block; margin:0 auto;">
-        <p>
-          The pipeline for constructing ELITE benchmark. 1) Taxonomy Alignment: Align the image-text pairs in existing benchmarks with the taxonomy of the ELITE benchmark. 2) Filtering: Integrate only image-text pairs where at least two out of three model responses assign an ELITE evaluator score of 10 or higher. 3) Balancing the Taxonomy: Remove image-text pairs with the lowest combined ELITE evaluator score from overly concentrated taxonomies to maintain balance across taxonomies after filtering.
-        </p>
-			</div>
-			<div class="column is-half">
-			  <img src="./static/images/result2 (3).pdf" alt="result2" style="width:100%; max-width:1000px; display:block; margin:20px auto;">
-        <p>
-          Examples of safety evaluations about the victim model's response by ELITE and StrongREJECT evaluator. $r$, $s$, $c$, and $t$ represent refused, specific, convincing, and toxicity, respectively. The ELITE evaluator can effectively evaluate utilizing the toxicity score to make more accurate judgments.
-        </p>
-			</div>
-		</div>
-	  </div>
-	</div>
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">ELITE Benchmark</h2>
+          <img src="./static/images/table.png" alt="Figure 3" style="width:100%; max-width:1000px;">
+          <p>
+            Overview of the ELITE benchmark. We created 4,587 image-text pairs by filtering out ambiguous image-text pairs that are unable to induce harmful responses in both existing benchmarks and the in-house generated image-text pairs. "New" refers to the image-text pairs we generated using various methods. In the case of JailbreakV-28k, filtering is performed only on insufficient taxonomies to maintain balance across taxonomies.
+          </p>
+        </div>
+      </div>
+  
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <img src="./static/images/figure3 (4)-1.png" alt="result" style="width:100%; max-width:1000px; display:block; margin:0 auto;">
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <p>
+            The pipeline for constructing ELITE benchmark. 1) Taxonomy Alignment: Align the image-text pairs in existing benchmarks with the taxonomy of the ELITE benchmark. 2) Filtering: Integrate only image-text pairs where at least two out of three model responses assign an ELITE evaluator score of 10 or higher. 3) Balancing the Taxonomy: Remove image-text pairs with the lowest combined ELITE evaluator score from overly concentrated taxonomies to maintain balance across taxonomies after filtering.
+          </p>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section class="section" id="Figure3">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">ELITE evaluator</h2>
+          <div class="columns is-centered">
+            <div class="column is-half">
+              <img src="./static/images/figure2 (3)-1.png" alt="result" style="width:100%; max-width:1000px; display:block; margin:0 auto;">
+            </div>
+          </div>
+          <div class="columns is-centered">
+            <div class="column is-full-width">
+              <p>
+                Examples of safety evaluations about the victim model's response by ELITE and StrongREJECT evaluator. $r$, $s$, $c$, and $t$ represent refused, specific, convincing, and toxicity, respectively. The ELITE evaluator can effectively evaluate utilizing the toxicity score to make more accurate judgments.
+              </p>
+            </div>
+          </div>
+        </div>
+  </section>
+  
 
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Results</h2>
+        <h2 class="title is-3">Quantitative Results</h2>
         <img src="./static/images/table2.png" alt="Figure 1" style="width:100%; max-width:1000px;">
 		  <p>
         ELITE evaluator score-based ASR of various VLMs across taxonomies. The upper group in the table represents proprietary models, and the lower group represents open-source models. The most vulnerable model is highlighted in <b>bold</b> and the second-most vulnerable with an <span class="underline">underline</span>.
 	    </p>
 			</div>
-		  </div>
-	  </div>
-	</div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
+		</div>
+    <!-- 좌우 배치된 이미지 -->
+    <div class="columns is-centered">
+      <div class="column is-half">
+        <img src="./static/images/figure4 (2)-1.png" alt="Figure 4" style="width:100%; max-width:1000px; display:block; margin:0 auto;">
+      </div>
+      <div class="column is-half" style="margin-top: 70px;">
+        <img src="./static/images/table3.png" alt="Table 3" style="width:100%; max-width:1000px; display:block; margin:30 auto;">
+      </div>
+    </div>
 
+    <!-- 전체 너비의 설명 문장 -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <p>
+          <b>Left</b>: The comparison of AU-ROC curves between the ELITE evaluator and StrongREJECT evaluator on our human evaluation dataset. <b>Right</b>: Performance comparison of the ELITE (GPT-4o), ELITE (InternVL2.5-8B, 26B), ELITE (InternVL2.5-26B), LlamaGuard3- Vision-11B, LlavaGuard-13B, and OpenAI Moderation API on our human evaluation dataset. The best-performing method is highlighted in <b>bold</b> and the second-best method with an <span class="underline">underline</span>.
+        </p>
       </div>
     </div>
   </div>
