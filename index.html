@@ -159,9 +159,7 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <p>
             Current Vision Language Models (VLMs) remain vulnerable to malicious prompts that induce harmful outputs. Existing safety benchmarks for VLMs primarily rely on automated evaluation methods, but these methods struggle to detect implicit harmful content or produce inaccurate evaluations. Therefore, we found that existing benchmarks have low levels of harmfulness, ambiguous data, and limited diversity in image-text pair combinations. To address these issues, we propose the ELITE benchmark, a high-quality safety evaluation benchmark for VLMs, underpinned by our enhanced evaluation method, the ELITE evaluator. The ELITE evaluator explicitly incorporates a toxicity score to accurately assess harmfulness in multimodal contexts, where VLMs often provide specific, convincing, but unharmful descriptions of images. We filter out ambiguous and low-quality image-text pairs from existing benchmarks using the ELITE evaluator and generate diverse combinations of safe and unsafe image-text pairs. Our experiments demonstrate that the ELITE evaluator achieves superior alignment with human evaluations compared to prior automated methods, and the ELITE benchmark offers enhanced benchmark quality and diversity. By introducing ELITE, we pave the way for safer, more robust VLMs, contributing essential tools for evaluating and mitigating safety risks in real-world applications.
-          </p>
         </div>
       </div>
     </div>
@@ -174,9 +172,9 @@
 	  <div class="columns is-centered">
 		<div class="column is-full-width">
 		  <img src="./static/images/figure1 (1)-1.png" alt="Figure 1" style="width:100%; max-width:1000px;">
-		  <p>
+		  <div class="content has-text-justified">
         Contributions of ELITE. (a) Benchmark Construction: The ELITE benchmark is a high-quality benchmark built by filtering out unsuccessful image-text pairs using the ELITE evaluator. (b) Generated Image-Text Pairs: Image-text pair with various methods for inducing harmful responses from VLMs. (c) Evaluation Method: The ELITE evaluator is a more precise rubric-based safety evaluation method compared to existing methods for VLMs.		  
-	      </p>
+      </div>
 		</div>
 	  </div>
 	</div>
@@ -188,9 +186,9 @@
         <div class="column is-full-width">
           <h2 class="title is-3">ELITE Benchmark</h2>
           <img src="./static/images/table.png" alt="Figure 3" style="width:100%; max-width:1000px;">
-          <p>
+          <div class="content has-text-justified">
             Overview of the ELITE benchmark. We created 4,587 image-text pairs by filtering out ambiguous image-text pairs that are unable to induce harmful responses in both existing benchmarks and the in-house generated image-text pairs. "New" refers to the image-text pairs we generated using various methods. In the case of JailbreakV-28k, filtering is performed only on insufficient taxonomies to maintain balance across taxonomies.
-          </p>
+          </div>
         </div>
       </div>
   
@@ -201,9 +199,9 @@
       </div>
       <div class="columns is-centered">
         <div class="column is-full-width">
-          <p>
+          <div class="content has-text-justified">
             The pipeline for constructing ELITE benchmark. 1) Taxonomy Alignment: Align the image-text pairs in existing benchmarks with the taxonomy of the ELITE benchmark. 2) Filtering: Integrate only image-text pairs where at least two out of three model responses assign an ELITE evaluator score of 10 or higher. 3) Balancing the Taxonomy: Remove image-text pairs with the lowest combined ELITE evaluator score from overly concentrated taxonomies to maintain balance across taxonomies after filtering.
-          </p>
+          </div>
         </div>
       </div>
     </div>
@@ -221,11 +219,11 @@
           </div>
           <div class="columns is-centered">
             <div class="column is-full-width">
-              <p>
+              <div class="content has-text-justified">
                 Examples of safety evaluations about the victim model's response by ELITE and StrongREJECT evaluator. 
                 \( r \), \( s \), \( c \), and \( t \) represent refused, specific, convincing, and toxicity, respectively. 
                 The ELITE evaluator can effectively evaluate utilizing the toxicity score to make more accurate judgments.
-              </p>
+              </div>
             </div>
           </div>
         </div>
@@ -246,9 +244,9 @@
       <div class="column is-full-width">
         <h2 class="title is-3">Quantitative Results</h2>
         <img src="./static/images/table2.png" alt="Figure 1" style="width:100%; max-width:1000px;">
-		  <p>
+      <div class="content has-text-justified">
         ELITE evaluator score-based ASR of various VLMs across taxonomies. The upper group in the table represents proprietary models, and the lower group represents open-source models. The most vulnerable model is highlighted in <b>bold</b> and the second-most vulnerable with an <span class="underline">underline</span>.
-	    </p>
+	    </div>
 			</div>
 		</div>
     <!-- 좌우 배치된 이미지 -->
@@ -263,10 +261,11 @@
 
     <!-- 전체 너비의 설명 문장 -->
     <div class="columns is-centered">
-      <div class="column is-full-width">
-        <p>
-          <b>Left</b>: The comparison of AU-ROC curves between the ELITE evaluator and StrongREJECT evaluator on our human evaluation dataset. <b>Right</b>: Performance comparison of the ELITE (GPT-4o), ELITE (InternVL2.5-8B, 26B), ELITE (InternVL2.5-26B), LlamaGuard3- Vision-11B, LlavaGuard-13B, and OpenAI Moderation API on our human evaluation dataset. The best-performing method is highlighted in <b>bold</b> and the second-best method with an <span class="underline">underline</span>.
-        </p>
+      <div class="content has-text-justified">
+        <ul>
+          <li><b>Left</b>: The comparison of AU-ROC curves between the ELITE evaluator and StrongREJECT evaluator on our human evaluation dataset.</li>
+          <li><b>Right</b>: Performance comparison of the ELITE (GPT-4o), ELITE (InternVL2.5-8B, 26B), ELITE (InternVL2.5-26B), LlamaGuard3-Vision-11B, LlavaGuard-13B, and OpenAI Moderation API on our human evaluation dataset. The best-performing method is highlighted in <b>bold</b> and the second-best method with an <span class="underline">underline</span>.</li>
+        </ul>
       </div>
     </div>
   </div>
