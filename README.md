@@ -136,7 +136,6 @@ Set `ELITE_IMAGE_BASE_DIR` to the **base directory** under which images are stor
   ```
   The category value is taken from the CSV column configured as category (default `category_assigned`; for ELITE-benchmark use `taxonomy` or `taxonomy_code`).
 - Example: if `ELITE_IMAGE_BASE_DIR=data/images`, category value is `S1`, and `image_name=img_001.png`, the file must be at `data/images/S1/img_001.png`.
-- Images are resized (max 256×256) and sent as base64 to the judge; formats supported are those handled by PIL (e.g. PNG, JPEG).
 
 ### Usage
 
