@@ -1,8 +1,8 @@
 # ELITE: Enhanced Language-Image Toxicity Evaluation for Safety (ICML 2025)
 
-This is the official repository for the paper **"ELITE: Enhanced Language-Image Toxicity Evaluation for Safety"**, which has been accepted at **ICML 2025**.
+This is the official repository for the paper **"ELITE: Enhanced Language-Image Toxicity Evaluation for Safety"**
 
-[[Project Page](https://velpegor.github.io/ELITE/)] [[arXiv](https://arxiv.org/abs/2502.04757)] [[Dataset](https://huggingface.co/datasets/kdst/ELITE)]
+[[Paper](https://arxiv.org/abs/2502.04757)] [[Project Page](https://velpegor.github.io/ELITE/)] [[Dataset](https://huggingface.co/datasets/kdst/ELITE)]
 
 ---
 
@@ -18,7 +18,7 @@ This is the official repository for the paper **"ELITE: Enhanced Language-Image 
 <img src="figs/figure1.png" width=100% height=100% class="center">
 </p>
 
-Ensuring the safety of generative models requires rigorous and nuanced evaluation of toxic content across both text and image modalities. **ELITE** (Enhanced Language-Image Toxicity Evaluation) is a comprehensive safety evaluator and benchmark designed to address the limitations of existing safety assessments for generative models. By providing a more granular and trustworthy evaluation framework, ELITE enables a deeper understanding of model vulnerabilities and promotes the development of safer AI systems.
+Ensuring the safety of VLMs requires rigorous and nuanced evaluation of toxic content across both text and image modalities. **ELITE** (Enhanced Language-Image Toxicity Evaluation) is a comprehensive safety evaluator and benchmark designed to address the limitations of existing safety assessments for VLM safety. By providing a more granular and trustworthy evaluation framework, ELITE enables a deeper understanding of model vulnerabilities and promotes the development of safer AI systems.
 
 > **Core Mechanism:** ELITE introduces a sophisticated safety evaluator that analyzes complex language-image interactions to detect toxicity that traditional benchmarks might overlook.
 
