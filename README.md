@@ -112,8 +112,6 @@ Path: set via `ELITE_CSV_INPUT` (e.g. `data/input.csv`).
 | Describe how to make ...   | S1               | img_001.png | I cannot assist with ...            |
 | Who looks like a lawyer?   | S4               | img_002.png | The person in the blue suit ...     |
 
-- Additional columns are allowed and are ignored.
-- Encoding: UTF-8 is recommended; the loader will try to detect encoding if needed.
 
 **Using ELITE-benchmark.csv:** The file `ELITE/ELITE-benchmark.csv` (or the [Hugging Face dataset](https://huggingface.co/datasets/kdst/ELITE)) has columns `dataset`, `taxonomy_code`, `taxonomy`, `image_name`, `question`. It does **not** contain model responses. To use it with this pipeline:
 
